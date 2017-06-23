@@ -2,17 +2,17 @@
 
 ## Purpose
 
-Create a blog application in which logged in users can edit, delete, update their blog posts, comment and like.
+Create a blog application in which logged in users can edit, delete, update, comment and like their blog posts.
 
 Application is created by using Google App Engine.
 
 ## Usage
 
-* project url: http://fesers-database.appspot.com/
+* Project url: http://fesers-database.appspot.com/
 
 * Sign up: http://fesers-database.appspot.com/signup
 
-* User login: http://fesers-database.appspot.com/login 
+* User login: http://fesers-database.appspot.com/login
 
 * Add post: http://fesers-database.appspot.com/newpost
 
