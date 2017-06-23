@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{post.render() | safe}}
+
+    <div class="post-footer">
+    {% if (user and user.key().id() == post.user_id) or not user %}
+      <a href="/edit/{{post.key().id()}}">
+        <input type="submit" value="Edit">
+      </a>
+    {% endif %}
+    {% if (user and user.key().id() == post.user_id) or not user %}
+      <a href="/delete/{{post.key().id()}}">
+        <input type="submit" value="Delete">
+      </a>
+    {% endif %}
+      <a href="/comment/add/{{post.key().id()}}">
+       <input type="submit" value="Comment">
+      </a>
+    {% if (user and user.key().id() != post.user_id) or not user %}
+      <a href="/like/{{post.key().id()}}">
+       <input type="submit" value="Like">
+      </a>
+    {% endif %}
+
+  </div>
+  <h2>Comments</h2>
+  {% for c in comments %}
+    {{ c.render() | safe }}
+    {% if (user and user.key().id() == post.user_id) or not user %}
+      <a class="link_button" href="/comment/edit/{{c.key().id()}}">
+            <input type="submit" value="Edit">
+      </a>
+      <a class="link_button" href="/comment/delete/{{c.key().id()}}">
+            <input type="submit" value="Delete">
+      </a>
+    {% endif %}
+    <br><br>
+  {% endfor %}
+{% endblock %}
+

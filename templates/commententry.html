@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>{{comment_title}}</h2>
+
+    <form method="post">
+      <label>
+        <textarea name="content">{{content}}</textarea>
+      </label>
+
+      <div class="error">{{error}}</div>
+      <input type="submit">
+      {% if post_id %}
+        <a href="/post/{{post_id}}">Cancel</a>
+      {% endif %}
+    </form>
+{% endblock %}

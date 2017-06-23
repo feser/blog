@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Login</title>
+  <style type="text/css">
+      .label {text-align: left}
+      .error {color: red}
+   </style>
+</head>
+<body>
+<a href="/signup" alt="signup">Signup</a>
+<a href="/" alt="Mainpage">Main page</a>
+<h2>Login</h2>
+<form method="post">
+      <table>
+        <tbody><tr>
+          <td class="label">
+            Username
+          </td>
+          <td>
+            <input type="text" name="username" value="{{username}}">
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Password
+          </td>
+          <td>
+            <input type="password" name="password">
+          </td>
+        </tr>
+
+        <tr>
+          <td class="error">
+                {{login_error}}
+          </td>
+          <td>
+          </td>
+        </tr>
+
+      </tbody></table>
+
+      <input type="submit">
+    </form>
+</body>
+</html>
+
